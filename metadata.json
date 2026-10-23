@@ -1,6 +1,6 @@
 {
-  "name": "Remix AI Data Analyst app",
-  "description": "AI Data Analyst delivers interactive data analytics and insights. Upload CSVs, ask a question, and let Gemini Managed Agents autonomously analyze it. a similar making of this app",
+  "name": "Large Dataset Analysis",
+  "description": "Large Dataset Analysis delivers interactive data analytics and insights. Upload CSVs, ask a question, and let the AI autonomously analyze large datasets and generate charts, reports, and recommendations.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
