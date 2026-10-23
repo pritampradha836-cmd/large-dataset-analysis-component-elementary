@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import { downloadAnalysisReport } from './lib/analysisReport';
 import type {
   ActivityLog, AnalysisReport, ReportChart, ReportTable, UploadedFile,
 } from './types';
@@ -1983,7 +1984,15 @@ const ReportView: React.FC<{ report: AnalysisReport }> = ({ report }) => {
           </div>
 
           {/* Action Tools */}
-          <div className="flex items-center gap-2.5 shrink-0 self-start md:self-center">
+          <div className="flex flex-wrap items-center gap-2.5 self-start md:self-center">
+            <button
+              onClick={() => downloadAnalysisReport(report)}
+              title="Download a standalone HTML report to open offline or share"
+              className="flex items-center gap-2 rounded-xl border border-neutral-200 bg-neutral-50 px-3.5 py-2.5 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 cursor-pointer"
+            >
+              <Download className="w-4 h-4" aria-hidden="true" />
+              Download report (HTML)
+            </button>
             <button
               onClick={exportDashboardToPDF}
               disabled={isExportingPdf}
